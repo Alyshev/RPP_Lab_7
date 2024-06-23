@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+admin.site.register(User)
+admin.site.register(City)
+admin.site.register(Age)
+admin.site.register(WorkExperience)
+admin.site.register(FullName)
+admin.site.register(Position)
+

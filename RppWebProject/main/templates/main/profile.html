@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+{% block title %}
+    Профиль
+{% endblock %}
+{% block content %}
+   <div class="modal_window profile_col" data-modal="">
+        <div><h3>Имя пользователя: </h3><span> {{ user.username }} </span></div>
+        <div><h3>Роль:</h3> <span> {{ user.user_role }} </span></div>
+        {% if user.email %}
+        <div><h3>Почта: </h3><span> {{ user.email }} </span></div>
+        {% endif %}
+       <div><h3>Дата создания аккаунта:</h3> <span> {{ user.date_joined}} </span></div>
+       <div><h3>Последнее изменение аккаунта: </h3><span> {{ user.last_login }} </span></div>
+        <a href="{% url 'edit_profile' %}" class="submit_btn">Редактировать профиль</a>
+    </div>
+{% endblock %}

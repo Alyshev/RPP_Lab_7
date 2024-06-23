@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+{% block title %}
+    Профиль
+{% endblock %}
+{% block content %}
+    <div class="modal_window registr" data-modal="">
+        <p class="title_name auth_name">Редактирование профиля</p>
+        <form class="form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="submit_btn">Сохранить изменения</button>
+        </form>
+    </div>
+{% endblock %}

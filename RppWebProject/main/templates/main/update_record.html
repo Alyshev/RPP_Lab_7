@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Обновить запись
+{% endblock %}
+{% block content %}
+<div class="modal_window" data-modal="">
+        <p class="title_name">Обновить запись</p>
+        <form class="form" method="post">
+            {% csrf_token %}
+            <label style="font-size:18  px">ФИО</label>
+            <p style=" color: black;">{{ form.fullName }}<p>
+            <label style="font-size:14  px">Должность</label>
+            {{ form.positiom }}
+            <label style="font-size:14  px">Выплата</label>
+            {{ form.payment }}
+            <button class="submit_btn" type="submit">Обновить</button>
+        </form>
+    </div>
+{% endblock %}
